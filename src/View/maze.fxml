@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import View.MazeDisplay?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ToggleButton?>
+<BorderPane onKeyPressed="#KeyPressed" prefHeight="540" prefWidth="960" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MazeController">
+    <left>
+        <GridPane prefHeight="200.0" prefWidth="170.0">
+            <rowConstraints>
+                <RowConstraints maxHeight="272.0" minHeight="7.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="531.0" minHeight="10.0" prefHeight="465.0"  vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="19.0" minHeight="19.0" prefHeight="19.0" />
+            </rowConstraints>
+            <ImageView fitHeight="70.0" fitWidth="180" GridPane.rowIndex="0">
+                <Image url="/Images/marioTube.png" />
+            </ImageView>
+            <VBox alignment="TOP_CENTER" prefHeight="227.0" prefWidth="170" GridPane.rowIndex="1">
+                <Button fx:id="btn_newMaze" onAction="#generateNewMaze" prefHeight="50" prefWidth="150" text="New Maze"/>
+                <Button prefHeight="50" prefWidth="180" onAction="#saveGameClicked" text="Save Game" />
+                <Button prefHeight="50" prefWidth="180" onAction="#LoadGameClicked" text="Load Game" />
+                <Button fx:id="btn_solveMaze" onAction="#solveMaze" prefHeight="50" prefWidth="150" text="Solve Maze" />
+                <Button prefHeight="50" prefWidth="180" onAction="#howToPlayScene" text="How To Play" />
+                <Button prefHeight="50" prefWidth="180" onAction="#About" text="About" />
+                <Button fx:id="btn_mute" prefHeight="100" prefWidth="180" onAction="#mute" alignment="CENTER" />
+                <Button prefHeight="50" prefWidth="180" onAction="#closeEvent" text="Exit" />
+            </VBox>
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+            
+        </GridPane>
+    </left>
+    <center>
+        <Pane>
+
+             <MazeDisplay fx:id="mazeDis" height="540" onMouseClicked="#mouseClicked" width="540.0" />
+
+
+        </Pane>
+            <!--<MazeDisplay fx:id="mazeDisplayer" height="400" width="400" imageFileNameCharacter="resources/Images/character1.jpg" imageFileNameWall="resources/Images/wall3.jpg" layoutX="2.0" layoutY="-2.0" onMouseClicked="#mouseClicked"  />-->
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="15">
+            <children>
+                <Label text="Status bar:" />
+                <Label text="Char row:" />
+                <Label fx:id="lbl_rowsNum" />
+                <Label text="Char column:" />
+                <Label fx:id="lbl_columnsNum" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

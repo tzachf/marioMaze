@@ -1,0 +1,94 @@
+.root{
+
+    -fx-background-image: url("/Images/MarioBack.jpg");
+    -fx-background-repeat: repeat;
+    -fx-background-size: 960 540;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+
+}
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('Font/PressStart2P-Regular.ttf');
+}
+
+
+Label {
+
+    -fx-font-family: 'Press Start 2P',Serif;
+    -fx-font-size: 15;
+    -fx-text-fill: #e8ba9d;
+
+}
+Button {
+
+
+    -fx-font-size: 13;
+    -fx-text-fill: #dfcc00;
+    -fx-font-family: "Press Start 2P";
+    -fx-font-weight: bold;
+    -fx-border-color:transparent;
+    -fx-background-color:transparent;
+
+}
+
+#btn_right{
+    -fx-background-image: url("/Images/rightArrow.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 50 50;
+    -fx-background-radius: 25px, 25px, 25px, 25px;
+}
+
+
+#btn_left{
+       -fx-background-image: url("/Images/leftArrow.png");
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center;
+        -fx-background-size: 50 50;
+        -fx-background-radius: 25px, 25px, 25px, 25px;
+
+}
+
+#btn_left:hover{
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-radius: 25px, 25px, 25px, 25px;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+
+}
+
+
+#btn_right:hover{
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-radius: 25px, 25px, 25px, 25px;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+
+}
+
+Button:hover{
+
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: black;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+#txtfld_columnsNum{
+    -fx-font-family: "Press Start 2P";
+    -fx-font-weight: bold;
+    -fx-background-color: #e8ba9d;
+}
+
+
+#txtfld_rowsNum{
+    -fx-font-family: "Press Start 2P";
+    -fx-font-weight: bold;
+    -fx-background-color: #e8ba9d;
+}

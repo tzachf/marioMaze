@@ -1,0 +1,9 @@
+
+.label {
+    -fx-font-family: 'Press Start 2P';
+    -fx-font-size: 20;
+}
+
+.button .text {
+    -fx-font-family: 'Press Start 2P';
+}
